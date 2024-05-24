@@ -1,0 +1,142 @@
+.body {
+         background-color: 	#f0ffff ;
+	
+	
+	}
+
+/*farben: 	#f0f8ff  /  	#f0f8ff */
+/* Margin: unten */
+
+
+		
+.box1  {  
+         border:solid 1px gray;
+         float: left;
+	     text-align: left;
+	     border-radius: 20px;
+	     background-color: #f0f8ff ;
+	     
+	     padding-bottom: 10px;
+	     padding-right: 1500px;
+	    
+         margin: 00px 100px 00px 310px ;
+         font-family:Sans-serif;
+        
+}
+
+.box2:hover {
+     opacity: 500;	
+	
+}
+
+.box2 {  
+         border:solid 1px gray;
+         float: left;
+	     text-align: left;
+	     border-radius: 20px;
+	     background-color: #f0f8ff ;
+	  
+	     padding-bottom: 800px;
+	     padding-right: 120px;
+	  
+         border: 100px 100px 100px 150px ;
+         font-family:Sans-serif;
+          opacity: 1;
+}
+
+.box3  {  
+         
+         border:solid 1px gray;
+         float: left;
+	     text-align: left;
+	     border-radius: 20px;
+	     background-color: #f0f8ff ;
+	    
+	     padding-bottom: 800px;
+	     padding-right: 1500px;
+	  
+     
+         font-family:Sans-serif;
+
+}
+
+
+
+/* Kommentare als Verstädnis der Denkrichtung*/
+
+
+/*Farbe der Seite für später ""e0ffff""*/	
+	
+
+
+
+
+	
+.Würfel {
+	    left: 30px;
+        top: 20px;		
+	    width: 100px;
+		height: 100px;
+		transform-style: preserve-3d;
+		animation: rotate 15s infinite linear;
+		margin: 00px 100px 100px 100px; 
+     }
+
+		
+/*Würfelseite kann Kopiert*/		  
+.Fläche {
+		 position: absolute;
+		 width:  100px;
+		 height:  100px;
+		 border: 1px solid black;
+		 
+		 display: flex;
+		 justify-content: left;
+		 align-items: left;
+		 transform-style: preserve-3d;
+	}
+
+		
+/* Würfelseiten position*/		
+.front {
+		 transform: translateZ(50px);
+		 background-image: url("g1.png");
+		 text-align: center;
+	}	
+.back {
+		 transform: rotateY(180deg) translateZ(50px);
+		 background-image: url("g1.png");
+		 text-align: center;
+		 
+	}	
+.top {
+		 transform: rotateX(90deg) translateZ(50px);
+		 background-image: url("g1.png")  ;
+		 text-align: center;
+	}	
+.bottom {
+		 transform: rotateX(-90deg) translateZ(50px);
+		 background-image: url("g1.png");
+		 text-align: center;
+	}	
+.left {
+		 transform: rotateY(-90deg) translateZ(50px);
+		 background-image: url("g1.png");
+		 text-align: center;
+	}	
+.right {
+		 transform: rotateY(90deg) translateZ(50px);
+		 background-image: url("g1.png");
+		 text-align: center;
+	}
+	
+
+	/*Bewirkt das sich der Würfel dreht*/
+		@keyframes rotate {
+			from {
+				transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+			to {
+				transform: rotateX(720deg) rotateY(360deg) rotateZ(360deg);
+			}
+		}	

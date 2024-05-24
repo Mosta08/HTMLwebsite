@@ -1,0 +1,196 @@
+.body {
+         background-color: #111 ; /*Hintergrundfarbe*/
+		
+	 }
+	 
+	
+.box1  {  
+         width: 1650px;/*breite*/
+         padding-bottom: 40px;/*tiefe*/
+         color:#818181;/*Schriftfarbe*/
+         margin: 10px 00px 00px 200px;/*podition in margin*/
+         float: left;/*fliegt*/
+         border-color: #818181;/*Farbe der Umrandung*/
+		 border: 3px solid ; /*höhe/breite Umrandung*/
+		 
+     }
+/*habe ich so gemacht damit die Überschrift schön zur geltung.*/	 
+/*Box 2 gibt es nicht da diese gegen Seitenleiste ersetzt wurde*/	 
+	 
+.box3 {  
+         
+         width: 700px;/*breite*/
+         padding-bottom: 100px;/*tiefe*/
+         color:#818181;/*Schriftfarbe*/
+         margin: 110px 100px 100px 200px;/*podition in margin*/
+         float: left;/*fliegt*/
+		 
+     }
+/*Der Text sollte leserlich positionier sein. Lässt die Website nicht so billig aussehen. ziel war es das 
+der Text nicht kreuz und quer ist*/
+
+
+a { /*a steht vor links. Hier wird es verändert */
+         text-decoration: none;/*Keine text dekoration*/
+         color: #818181;/*änderung der Farbe*/
+
+     }
+
+	
+a:hover { /*hover= drüberfahren*/
+         color: red;	/*farb wechsel*/
+
+     }
+/*Soll erkennen das hier ein link ist */
+
+/*WÜRFEL*/	
+.Würfel {
+	    left: 30px; /*wird zur positions bestimmung, in HTML, verwendet. Dort ist es mit Seitenleiste verknüpft*/
+        top: 20px;/*wird zur positions bestimmung, in HTML, verwendet. Dort ist es mit Seitenleiste verknüpft*/		
+	    width: 100px;/*breite*/
+		height: 100px;/*höhe*/
+		transform-style: preserve-3d;/*3D*/
+		animation: rotate 15s infinite linear;/*Wie soll sich der Würfel drehen. infinite linear= es geht unendlich*/
+		margin: px 100px 100px 190px; /*margin position*/
+		
+     }
+
+				  
+.Fläche {
+		 position: absolute;/*position*/
+		 width:  100px;/*breite*/
+		 height:  100px;/*höhe*/
+		 border: 1px solid black;/*Ümrandundg / davon hohe breite*/		 
+		 display: flex;/**/
+		 justify-content: left;/*richtet die Elemente des flexiblen Würfels aus*/
+		 align-items: left;/*Achsen ausrichtung von <div>*/
+		 transform-style: preserve-3d;/*3D*/
+	 }
+
+		
+/* Würfelseiten position*/		
+.front { /*Seite*/
+		 transform: translateZ(50px); /*Eine Achse + länge */
+		 background-image: url("g1.png");/*Foto*/
+		 
+	 }
+	 
+.back {/*Seite*/
+		 transform: rotateY(180deg) translateZ(50px);/*Eine Achse + länge */
+		 background-image: url("g1.png");/*Foto*/
+		 		 
+	 }
+	
+.top {/*Seite*/
+		 transform: rotateX(90deg) translateZ(50px);/*Eine Achse + länge */
+		 background-image: url("g1.png")  ;/*Foto*/
+		 
+	 }	
+	 
+.bottom {/*Seite*/
+		 transform: rotateX(-90deg) translateZ(50px);/*Eine Achse + länge */
+		 background-image: url("g1.png");/*Foto*/
+		 
+	 }
+	
+.left {/*Seite*/
+		 transform: rotateY(-90deg) translateZ(50px);/*Eine Achse + länge */
+		 background-image: url("g1.png");/*Foto*/
+		 
+	 }	
+	
+.right {/*Seite*/
+		 transform: rotateY(90deg) translateZ(50px);/*Eine Achse + länge */
+		 background-image: url("g1.png");/*Foto*/
+		 
+	 }
+	
+   
+@keyframes rotate {/*Bewirkt das sich der Würfel dreht*/
+			
+		from { /*der Wüfel dreht sich von diesen Achsen....*/
+			transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	    }
+		/*....zu diesen*/
+		to {
+				transform: rotateX(720deg) rotateY(360deg) rotateZ(360deg);
+		}
+	}		
+/*Dekoration + Logo. Bleibt eine wiedererkennung*/			
+		
+/*"Seitenbar??"*/
+.Seitenbar {
+         height: 100%; /*böhe*/
+         width: 200px;/*breite*/
+         position: fixed;/*Box bleibt auf der stelle. */
+         top: 0;/*Position */
+         left: 0;/*position*/
+         background-color: #111;/*hintergrundfarbe*/
+         padding-top: 20px;/**/
+		 
+     }
+
+.Seitenbar a {
+         padding: 6px 8px 6px 16px;/*position in padding*/
+         text-decoration: none;/*keine Textdekoration*/
+         font-size: 25px;/**/
+         color: #818181;/*farbe der Schrift*/
+         display: block;/**/
+		 
+     }
+
+.Seitenbar a:hover {/*hover= drüberfhren*/
+         color: #f1f1f1;/*farbe der Schrift*/
+  
+}
+
+.main- {
+         height: -0,1vh;/*höphe*/
+         text-align: justify;/*text position*/
+	  
+     }
+/*Ich habe mich für eine Seitenbar entschieden, weil man mit <fixed> diese von überall erreichenn kann. Sie gibt der Website struktur.
+Wenn man über einen Link fährt ändert sich die Farbe damit man weiß welches Feld man auswählt */
+
+input  { /*Form des textfelds*/
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+/*Habe ich so gemacht das man genügend platz zum eingeben hat */
+button { /*Form des Login buttons*/
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #818181;
+  cursor: pointer;
+  width: 100%;
+}
+/*Buttons sollten größ und kenntlich sein */
+.container {  /*Umrandung Sign up*/
+border:2px solid white;
+
+	
+	
+}
+
+
+.rot { /*farbe + Border(Umrandung)*/
+background-color: red;	
+color: black;
+border-radius: 20px;	
+}
+.grün {/*farbe + Border(Umrandung)*/
+background-color: green;	
+color: black;
+border-radius: 20px;	
+}
+/*Verschönerung*/
+
+
